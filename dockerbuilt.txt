@@ -1,3 +1,5 @@
+***************CD***********
+
 Docker  image Build:-
 
 docker build -t shirishgund/amdocs .
