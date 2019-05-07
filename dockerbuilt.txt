@@ -1,1 +1,11 @@
+Docker  image Build:-
+
 docker build -t shirishgund/amdocs .
+
+Push image to docker hub
+
+docker login
+Username:shirishgund
+password:****
+
+docker push shirishgund/amdocs
