@@ -1,3 +1,5 @@
+*******************CI*********************
+
 ---
 - hosts: web
   tasks:
@@ -19,7 +21,7 @@
       state: present
   - name: add user to docker group
     user:
-      name: ram
+      name: shirish
       groups: docker
       shell: /bin/bash
       append: yes      
