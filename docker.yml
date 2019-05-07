@@ -1,0 +1,25 @@
+---
+- hosts: web
+  tasks:
+  
+  - name: "install docker" 
+    shell: curl -fsSl https://get.docker.com/ | sh
+    args:
+      warn: no
+
+  - name: "docker service start and enabled"
+    service:
+      name: docker
+      state: started
+      enabled: yes
+
+  - name: "maven install"
+    apt:
+      name: maven
+      state: present
+  - name: add user to docker group
+    user:
+      name: ram
+      groups: docker
+      shell: /bin/bash
+      append: yes      

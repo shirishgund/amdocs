@@ -1,0 +1,24 @@
+
+node() {
+        stage('Clean') {
+           
+                sh 'mvn install'
+            
+        }
+        
+        stage('checkout')
+        {
+            git 'https://github.com/kuberguy/helloworld'
+                
+            }
+		 stage('compile')
+        {
+            sh 'mvn compile'
+                
+            }	
+        stage('Deploy') {
+           
+                sh 'mvn deploy'
+            
+        }
+    }
