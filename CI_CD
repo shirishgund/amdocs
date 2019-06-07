@@ -2,7 +2,7 @@
 node() {
         stage('Clean') {
            
-                sh 'mvn install'
+                sh 'mvn clean'
             
         }
         
